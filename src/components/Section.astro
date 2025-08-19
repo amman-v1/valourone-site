@@ -1,0 +1,8 @@
+---
+const { title, eyebrow } = Astro.props;
+---
+<section class="mx-auto max-w-6xl px-4 py-14">
+  {eyebrow && <div class="text-xs uppercase tracking-[0.16em] text-ink-600">{eyebrow}</div>}
+  {title && <h2 class="mt-1 text-2xl md:text-3xl font-semibold">{title}</h2>}
+  <div class="mt-6"><slot /></div>
+</section>

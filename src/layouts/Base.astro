@@ -1,0 +1,28 @@
+---
+const { title = 'ValourOne — Cybersecurity for UK SMBs', description = 'Managed security built on Huntress. Simple, effective protection for law firms and small businesses.', ogImage = '/og.jpg' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="body-bg text-ink-900 selection:bg-valour-100 selection:text-ink-900">
+    <slot name="nav" />
+    <main class="min-h-screen"> <slot /> </main>
+    <slot name="footer" />
+    <script type="module">
+      import Plausible from 'plausible-tracker';
+      const { trackPageview } = Plausible({ domain: 'valourone.com' });
+      trackPageview();
+    </script>
+  </body>
+</html>

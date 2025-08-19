@@ -1,0 +1,16 @@
+---
+const features = [
+  { title: 'Managed EDR', desc: '24/7 monitoring, host isolation, and hands-on incident response.' },
+  { title: 'Phishing Training', desc: 'Human‑centric training and safe simulations that actually stick.' },
+  { title: 'Vulnerability Scans', desc: 'Lightweight scans to surface risky exposures in minutes.' },
+  { title: 'Compliance Support', desc: 'Reports aligned to SRA expectations and cyber insurance needs.' }
+];
+---
+<section class="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-4 gap-6">
+  {features.map(f => (
+    <div class="bg-white/80 backdrop-blur border border-ink-100 rounded-2xl p-6 shadow-soft">
+      <h3 class="font-semibold">{f.title}</h3>
+      <p class="mt-2 text-sm text-ink-700">{f.desc}</p>
+    </div>
+  ))}
+</section>

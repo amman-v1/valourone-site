@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light dark; }
+html { scroll-behavior: smooth; }
+a { @apply text-valour-500 hover:underline; }
+body { @apply font-sans; }
+/* Soft radial + subtle grid overlay */
+.body-bg {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(16,105,255,0.15), transparent 60%),
+    radial-gradient(800px 400px at 10% 20%, rgba(67,87,127,0.18), transparent 60%),
+    linear-gradient(180deg, #f7f9ff 0%, #eef2ff 100%);
+  position: relative;
+}
+.body-bg:before {
+  content: "";
+  position: fixed; inset: 0; pointer-events: none; opacity: .25;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='none' stroke='%23b7c0d9' stroke-width='0.5' d='M0 .25H32M.25 0V32'/%3E%3C/svg%3E");
+  background-size: 32px 32px;
+}

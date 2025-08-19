@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+import CalendlyEmbed from '../components/CalendlyEmbed.astro';
+---
+<Base title="Contact — ValourOne" description="Book a call or request a free scan.">
+  <Fragment slot="nav"><NavBar /></Fragment>
+  <section class="mx-auto max-w-5xl px-4 py-16 grid md:grid-cols-2 gap-10">
+    <div>
+      <h1 class="text-3xl font-semibold">Let’s talk</h1>
+      <p class="mt-2 text-ink-700">Tell us a bit about your environment and we’ll get back within one business day.</p>
+      <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" class="mt-8 grid gap-4 bg-white/80 border border-ink-100 rounded-2xl p-6 shadow-soft">
+        <input required name="name" placeholder="Your name" class="px-3 py-3 rounded-xl border border-ink-200" />
+        <input required type="email" name="email" placeholder="Work email" class="px-3 py-3 rounded-xl border border-ink-200" />
+        <input name="company" placeholder="Company" class="px-3 py-3 rounded-xl border border-ink-200" />
+        <textarea name="message" placeholder="What do you want to secure?" class="px-3 py-3 rounded-xl border border-ink-200 min-h-[140px]"></textarea>
+        <button class="px-4 py-3 rounded-xl bg-gradient-to-r from-valour-500 to-ink-700 text-white shadow-soft">Send</button>
+      </form>
+    </div>
+    <div>
+      <h2 class="text-xl font-semibold">Prefer to book directly?</h2>
+      <p class="mt-2 text-ink-700">Grab a slot that suits you.</p>
+      <CalendlyEmbed url="https://calendly.com/valourone/intro-call" />
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</Base>

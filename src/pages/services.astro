@@ -1,1 +1,26 @@
-<html><head><title>Services</title></head><body><h1>Our Cybersecurity Services</h1></body></html>
+---
+import Base from '../layouts/Base.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="Services — ValourOne" description="Managed EDR, phishing training, vulnerability scans, and compliance support.">
+  <Fragment slot="nav"><NavBar /></Fragment>
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <h1 class="text-3xl font-semibold">Services</h1>
+    <div class="mt-8 space-y-10">
+      <div id="mdr">
+        <h2 class="text-xl font-semibold">Managed EDR (Huntress)</h2>
+        <p class="mt-2 text-ink-700 max-w-prose">We deploy and manage Huntress across your devices, monitor 24/7, and act fast when something looks wrong. You get monthly reports in plain English and a named contact.</p>
+      </div>
+      <div id="phishing">
+        <h2 class="text-xl font-semibold">Phishing Training</h2>
+        <p class="mt-2 text-ink-700 max-w-prose">Short, human‑friendly modules and realistic simulations. No shaming—just improvement.</p>
+      </div>
+      <div id="vuln">
+        <h2 class="text-xl font-semibold">Vulnerability Scans</h2>
+        <p class="mt-2 text-ink-700 max-w-prose">Quick external scans of common exposures (RDP, VPNs, outdated services) with clear remediation steps.</p>
+      </div>
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</Base>
