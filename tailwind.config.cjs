@@ -13,9 +13,7 @@ module.exports = {
           500:'#1069ff',600:'#0d55cc',700:'#0a4199',800:'#072d66',900:'#041933'
         }
       },
-      boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.08)' },
-      borderRadius: { mega: '1.25rem' },
-      fontFamily: { sans: ['Outfit','ui-sans-serif','system-ui'] }
+      fontFamily: { sans: ['Outfit','ui-sans-serif','system-ui'] },
     }
   },
   plugins: []
